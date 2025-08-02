@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff6b9d, #ffa8d5, #ff9a9e);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+}
+
+.success-message {
+    margin-bottom: 2rem;
+    animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d63384;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.celebration-gif {
+    margin: 1.5rem 0;
+    border-radius: 15px;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+.celebration-gif img {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.date-options {
+    margin: 2rem 0;
+}
+
+.date-options h2 {
+    font-size: 1.8rem;
+    color: #d63384;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.date-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.date-card {
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.date-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: #ff6b9d;
+}
+
+.date-card:active {
+    transform: translateY(-5px) scale(1.01);
+}
+
+.date-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+.date-card h3 {
+    font-size: 1.3rem;
+    color: #d63384;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.date-card p {
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.bottom-message {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+}
+
+.bottom-message p {
+    color: #d63384;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Hover effects for each date type */
+.date-card:nth-child(1):hover {
+    background: linear-gradient(135deg, #ff6b9d, #ffa8d5);
+    color: white;
+}
+
+.date-card:nth-child(1):hover h3,
+.date-card:nth-child(1):hover p {
+    color: white;
+}
+
+.date-card:nth-child(2):hover {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+}
+
+.date-card:nth-child(2):hover h3,
+.date-card:nth-child(2):hover p {
+    color: white;
+}
+
+.date-card:nth-child(3):hover {
+    background: linear-gradient(135deg, #fd7e14, #ffc107);
+    color: white;
+}
+
+.date-card:nth-child(3):hover h3,
+.date-card:nth-child(3):hover p {
+    color: white;
+}
+
+.date-card:nth-child(4):hover {
+    background: linear-gradient(135deg, #6f42c1, #e83e8c);
+    color: white;
+}
+
+.date-card:nth-child(4):hover h3,
+.date-card:nth-child(4):hover p {
+    color: white;
+}
+
+.date-card:nth-child(5):hover {
+    background: linear-gradient(135deg, #17a2b8, #6610f2);
+    color: white;
+}
+
+.date-card:nth-child(5):hover h3,
+.date-card:nth-child(5):hover p {
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .date-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .date-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .date-icon {
+        font-size: 2.5rem;
+    }
+    
+    .container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .date-options h2 {
+        font-size: 1.5rem;
+    }
+    
+    .celebration-gif img {
+        max-width: 200px;
+    }
+}

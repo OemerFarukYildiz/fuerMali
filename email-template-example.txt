@@ -1,0 +1,25 @@
+📧 EmailJS Template Setup für Date Requests:
+
+TO: deine-email@gmail.com
+FROM: {{from_name}} <{{reply_to}}>
+SUBJECT: 💕 New Date Request: {{date_type}}
+
+TEMPLATE CONTENT:
+---
+🎉 Jemand möchte ein Date mit dir!
+
+📋 Date Details:
+🎯 Date Type: {{date_type}}
+📅 Date: {{date}}
+🕐 Time: {{time}}
+
+💌 Nachricht:
+{{note}}
+
+👤 Von: {{from_name}}
+📧 Reply to: {{reply_to}}
+
+Antworte einfach auf diese E-Mail! 💕
+---
+
+Template ID notieren: template_xyz789

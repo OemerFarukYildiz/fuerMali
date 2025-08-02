@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff6b9d, #ffa8d5, #ff9a9e, #a8e6cf);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem 2rem;
+    border-radius: 30px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.emotional-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.gif-container {
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+.gif-container img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.message-section {
+    margin: 2rem 0;
+}
+
+.main-message {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d63384;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.05); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.03); }
+}
+
+.support-message {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    line-height: 1.7;
+    font-style: italic;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.love-declaration {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #dc3545;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1),
+                     0 0 10px rgba(220, 53, 69, 0.3);
+    }
+    to {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1),
+                     0 0 20px rgba(220, 53, 69, 0.6),
+                     0 0 30px rgba(220, 53, 69, 0.4);
+    }
+}
+
+.buttons-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.love-button, .harsh-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    min-width: 180px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.love-button {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    color: white;
+    transform: scale(1);
+}
+
+.love-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(40, 167, 69, 0.4);
+}
+
+.love-button.growing {
+    animation: growButton 0.5s ease-out forwards;
+}
+
+@keyframes growButton {
+    from { transform: scale(1); }
+    to { transform: scale(1.3); }
+}
+
+.harsh-button {
+    background: linear-gradient(45deg, #dc3545, #fd7e14);
+    color: white;
+}
+
+.harsh-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(220, 53, 69, 0.4);
+}
+
+.harsh-button.sad {
+    background: linear-gradient(45deg, #6c757d, #495057);
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+/* Success response styling */
+.success-response {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem 2rem;
+    border-radius: 30px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    animation: successSlideIn 1s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes successSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.celebration-gif {
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    animation: celebrationBounce 1s ease-out infinite;
+}
+
+@keyframes celebrationBounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+.celebration-gif img {
+    max-width: 350px;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.success-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #28a745;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: rainbow 3s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+    0% { color: #28a745; }
+    16% { color: #dc3545; }
+    33% { color: #ffc107; }
+    50% { color: #17a2b8; }
+    66% { color: #6f42c1; }
+    83% { color: #e83e8c; }
+    100% { color: #28a745; }
+}
+
+.success-message {
+    font-size: 1.5rem;
+    color: #d63384;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.personal-message {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    line-height: 1.7;
+    font-style: italic;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.final-message {
+    font-size: 1.8rem;
+    color: #dc3545;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* Floating hearts for success */
+.hearts-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.floating-heart {
+    position: absolute;
+    font-size: 2rem;
+    animation: rainFall 3s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rainFall {
+    0% {
+        opacity: 1;
+        transform: translateY(-50px) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(400px) rotate(360deg);
+    }
+}
+
+/* Sad emoji effects */
+.sad-emoji {
+    font-size: 1.5rem;
+    animation: sadFloat 2s ease-in-out infinite;
+    margin: 0 0.5rem;
+}
+
+@keyframes sadFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-message {
+        font-size: 2rem;
+    }
+    
+    .love-declaration {
+        font-size: 1.6rem;
+    }
+    
+    .support-message {
+        font-size: 1.1rem;
+    }
+    
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .love-button, .harsh-button {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .success-title {
+        font-size: 2.5rem;
+    }
+    
+    .gif-container img {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-message {
+        font-size: 1.8rem;
+    }
+    
+    .love-declaration {
+        font-size: 1.4rem;
+    }
+    
+    .support-message {
+        font-size: 1rem;
+    }
+    
+    .content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .success-title {
+        font-size: 2rem;
+    }
+    
+    .celebration-gif img {
+        max-width: 200px;
+    }
+}

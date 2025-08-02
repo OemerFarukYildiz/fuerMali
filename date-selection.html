@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wähle unser Date! 💕</title>
+    <link rel="stylesheet" href="date-selection.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="success-message">
+            <h1 class="main-title">Yay! You said Yes! 🎉</h1>
+            <p class="subtitle">Now let's plan the perfect date!</p>
+        </div>
+        
+        <div class="celebration-gif">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif" alt="Celebration GIF">
+        </div>
+        
+        <div class="date-options">
+            <h2>What kind of date would you like?</h2>
+            <div class="date-grid">
+                <div class="date-card" onclick="selectDate('movie')">
+                    <div class="date-icon">🎬</div>
+                    <h3>Movie Date</h3>
+                    <p>Going to the cinema together</p>
+                </div>
+                
+                <div class="date-card" onclick="selectDate('paint')">
+                    <div class="date-icon">🎨</div>
+                    <h3>Paint Date</h3>
+                    <p>Painting and being creative together</p>
+                </div>
+                
+                <div class="date-card" onclick="selectDate('clay')">
+                    <div class="date-icon">🏺</div>
+                    <h3>Pottery Date</h3>
+                    <p>Making beautiful things with clay</p>
+                </div>
+                
+                <div class="date-card" onclick="selectDate('lego-picnic')">
+                    <div class="date-icon">🧱</div>
+                    <h3>Lego & Picnic</h3>
+                    <p>Building Lego and having a picnic in the park</p>
+                </div>
+                
+                <div class="date-card" onclick="selectDate('puzzle')">
+                    <div class="date-icon">🧩</div>
+                    <h3>Puzzle Date</h3>
+                    <p>Puzzling together cozily</p>
+                </div>
+                
+                <div class="date-card" onclick="selectDate('custom-idea')">
+                    <div class="date-icon">💡</div>
+                    <h3>Your Idea?</h3>
+                    <p>Or do you have a better idea?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="date-selection.js"></script>
+</body>
+</html>

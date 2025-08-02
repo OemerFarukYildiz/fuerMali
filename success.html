@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Said Yes! 💕</title>
+    <link rel="stylesheet" href="success-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="celebration-container">
+        <div class="success-message">
+            <h1 class="main-title">You Said Yes! 🎉</h1>
+            <p class="subtitle">I knew you couldn't resist! 😄</p>
+        </div>
+        
+        <div class="celebration-gif">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif" alt="Celebration GIF">
+        </div>
+        
+        <div class="love-message">
+            <h2>Now what should we do? 💭</h2>
+            <p>Let's plan our perfect Valentine's day together!</p>
+        </div>
+        
+        <div class="action-buttons">
+            <button class="action-btn" onclick="showDatingIdeas()">
+                <span>🍽️</span>
+                <div>Dinner Date</div>
+            </button>
+            <button class="action-btn" onclick="showMovieOptions()">
+                <span>🎬</span>
+                <div>Movie Night</div>
+            </button>
+            <button class="action-btn" onclick="showActivityIdeas()">
+                <span>🎯</span>
+                <div>Fun Activities</div>
+            </button>
+            <button class="action-btn" onclick="showSurprise()">
+                <span>🎁</span>
+                <div>Surprise Me!</div>
+            </button>
+        </div>
+        
+        <div class="content-area" id="contentArea">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+        
+        <div class="bottom-message">
+            <p>Can't wait to spend time with you! ❤️</p>
+            <button class="reset-btn" onclick="goToFinalPage()" style="background: linear-gradient(45deg, #dc3545, #e83e8c); margin-right: 1rem;">Ich liebe dich 💕</button>
+            <button class="reset-btn" onclick="goBack()">Ask someone else? 😉</button>
+        </div>
+    </div>
+    
+    <!-- Audio element for celebration sound (optional) -->
+    <audio id="celebrationSound" preload="auto">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+    </audio>
+    
+    <script src="success-script.js"></script>
+</body>
+</html>

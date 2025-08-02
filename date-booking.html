@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Buchung 💕</title>
+    <link rel="stylesheet" href="date-booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="booking-header">
+            <button class="back-button" onclick="goBack()">← Back</button>
+            <h1 class="main-title" id="dateTitle">Date Booking</h1>
+            <p class="subtitle" id="dateDescription">Let's plan the details!</p>
+        </div>
+        
+        <div class="date-preview" id="datePreview">
+            <!-- Date preview will be loaded here -->
+        </div>
+        
+        <form class="booking-form" id="bookingForm">
+            <div class="form-section">
+                <h3>📅 When should we meet?</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dateInput">Date:</label>
+                        <input type="date" id="dateInput" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeInput">Time:</label>
+                        <input type="time" id="timeInput" name="time" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>💌 Do you have a special message?</h3>
+                <div class="form-group">
+                    <label for="noteInput">Note (optional):</label>
+                    <textarea id="noteInput" name="note" rows="4" placeholder="You can write a sweet message or special wishes for our date here..."></textarea>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="submit-button">
+                    <span class="button-text">Send Date Request! 💕</span>
+                    <span class="button-loading" style="display: none;">Sending... ⏳</span>
+                </button>
+            </div>
+        </form>
+        
+        <div class="success-message" id="successMessage" style="display: none;">
+            <h2>🎉 Date Request sent!</h2>
+            <p>Your request has been successfully submitted. I'm so excited! 💕</p>
+        </div>
+        
+        <div class="error-message" id="errorMessage" style="display: none;">
+            <h3>😅 Oops! Something went wrong</h3>
+            <p>Please try again or just message me directly! 💌</p>
+            <button class="retry-button" onclick="hideError()">Try again</button>
+        </div>
+    </div>
+    
+    <script src="date-booking.js"></script>
+</body>
+</html>
